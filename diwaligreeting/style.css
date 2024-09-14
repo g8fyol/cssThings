@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&family=Style+Script&display=swap");
+
+/* .style-script-regular {
+  font-family: "Style Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.salsa-regular {
+  font-family: "Salsa", cursive;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+:root {
+  --hero-color: "";
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Salsa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.heroSection {
+  background-image: linear-gradient(to right, #f7a901 0%, #fa9601 100%);
+  /* background-image: url(images/rathwheel.jpg); */
+  background-image: url(images/herobackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1em;
+  margin-bottom: 0;
+}
+
+.decor {
+  position: absolute;
+  top: -5%;
+  left: 0%;
+  max-width: 350px;
+  width: 80%;
+}
+.paraAndMusic {
+  font-size: 48px;
+  margin-top: 20rem;
+  margin-left: 20rem;
+  max-width: 80%;
+}
+.greetText {
+  font-family: "Salsa", cursive;
+}
+
+.audioContainer {
+  margin-top: 2em;
+  padding-inline: 1em;
+  background-color: #fbd8a4;
+  border-radius: 50px;
+  font-size: 0.5em;
+  display: flex;
+  max-width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: #fbd8a4;
+  color: white;
+}
+.deepak1 {
+  max-width: 425px;
+  width: 100%;
+}
+.section0 {
+  background-image: linear-gradient(to right, #f7a901 0%, #fa9601 100%);
+  padding: 1em;
+}
+.dividerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.line {
+  min-width: 25%;
+  background-color: white;
+  height: 2px;
+  border-top: 2px;
+}
+.circle {
+  height: 10px;
+  width: 10px;
+  flex-shrink: 0;
+  border-radius: 100%;
+  background-color: white;
+}
+.imgpage2 {
+  /* background-color: #fa9601; */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: block;
+  max-width: 1200px;
+  padding: 1rem;
+  width: 100%;
+  margin-inline: auto;
+}
+.headingCursive {
+  font-family: "Style Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  text-align: center;
+}
+
+.section1 {
+  background-image: linear-gradient(to right, #f7a901 0%, #fa9601 100%);
+  padding: 1em;
+}
+.card {
+  margin-top: 2em;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  padding: 1em;
+  margin-inline: auto;
+  font-size: 32px;
+}
+.card .para {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 1em;
+  max-width: 300px;
+  /* text-align: center; */
+  /* width: fit-content; */
+  width: 50%;
+}
+.littlegirl {
+  max-width: 200px;
+  width: 50%;
+  /* flex-shrink: 1; */
+  align-items: center;
+}
+
+.section2 {
+  background-image: linear-gradient(to right, #f7a901 0%, #fa9601 100%);
+  padding: 1em;
+}
+[alt="ganeshji"],
+[alt="lakshmimaa"] {
+  width: 50%;
+}
+.footertext {
+  margin-top: 1em;
+  font-size: 2em;
+  /* background-color: red; */
+  /* padding-inline: 4em; */
+  max-width: 1000px;
+  /* background-color: red; */
+  margin-inline: auto;
+}
+.cursive {
+  font-family: "Style Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.credit {
+  text-align: right;
+}
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 880px) {
+  .soulful {
+    display: none;
+  }
+  [alt="musicmid"],
+  [alt="musicmid2"] {
+    display: none;
+  }
+  .deepak2 {
+    display: none;
+  }
+  .deepak1 {
+    display: block;
+    margin-left: auto;
+  }
+  .paraAndMusic {
+    /* margin-inline: auto; */
+    font-size: 28px;
+    margin-top: 25rem;
+    margin-left: 5rem;
+    /* font-size: 8px; */
+  }
+}
+
+@media (max-width: 500px) {
+  .paraAndMusic {
+    font-size: 24px;
+    margin-inline: auto;
+  }
+  .headingCursive {
+    font-size: 24px;
+  }
+  .card .para {
+    font-size: 18px;
+  }
+  footertext {
+    font-size: 18px;
+  }
+}

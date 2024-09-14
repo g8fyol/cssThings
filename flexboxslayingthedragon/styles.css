@@ -1,0 +1,110 @@
+/* BASE STYLES */
+:root {
+  --clr-dark: #0f172a;
+  --clr-light: #f1f5f9;
+  --clr-accent: #e11d48;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  word-spacing: 1.4px;
+  font-family: "Roboto", sans-serif;
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  height: 700px;
+  margin: 0 auto;
+  border: 10px solid var(--clr-dark);
+}
+
+.item {
+  width: 150px;
+  height: 150px;
+  background-color: #fb7185;
+  padding: 1em;
+  font-weight: 700;
+  color: var(--clr-light);
+  text-align: center;
+  border: 10px solid var(--clr-accent);
+  border-radius: 10px;
+}
+
+/* END OF BASE STYLES */
+.container {
+  display: flex;
+}
+
+/* end of base styles */
+.container {
+  display: flex;
+
+  /* flex-direction: row; default */
+  /* justify-content: flex-start; default */
+
+  /* justify-content: is to lay out elements along main axis; */
+  /* justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly; */
+
+  /* align item to align elements along cross axis
+  */
+  /* align-items: flex-end;
+  align-items: flex-start;
+  align-items: center; */
+  /* align-items: baseline;
+   */
+  /* align-items: flex-start; */
+
+  /* flex-wrap: wrap; */
+
+  /* when flexwraps we have align content property which aligns items along cross azis?
+ */
+  /* align-items: ;  this controls in their line  */
+  /* align-content: center;
+  align-items: flex-end;
+  align-content: space-between;
+  align-content: space-around;
+  align-content: flex-end;
+  /* gap: 1em; */
+  align-content: flex-start;
+
+  /* so the container property includes
+  1. justify-content: ;
+  2. align-items: ;
+  3. flex-wrap: ;
+  4. align-content: ;
+  5. gap: ; */
+}
+
+/* there are certain flex properties which belong to direct child of
+  the flex container */
+
+.item-1 {
+  font-size: 1rem;
+  /* align-self: flex-end;  //overrides align item for an individual item  */
+
+  /* flex-grow: 1; */
+  /* flex-basis: 100px;  //overrides width set and height in case of flex columns */
+  order: 1;
+}
+.item-3 {
+  /* flex-grow: 1;  //default is 0 */
+  flex-grow: 1;
+  order: -1;
+}
