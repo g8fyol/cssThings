@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: 1fr 4fr 2fr 1fr;
+  line-height: 32px;
+  /* grid-auto-flow: column; */
+  /* grid-template-rows: ; */
+  /* column-gap: 1rem; */
+  /* row-gap: 1rem; */
+  /* gap: 1em 1em; */
+}
+
+.box {
+  color: white;
+  font-size: 32px;
+  /* padding: 1rem; */
+}
+
+.box-1 {
+  background-color: brown;
+
+  /* it will just get to that position and other element before that position will come forward */
+  /* grid-column: 3;
+  grid-row: 1; */
+
+  /*m1*/
+  /* just setting it will push other down  */
+  /* grid-column-start: 3;
+
+  grid-row-start: 2; */
+
+  /* grid-row-start: 2; */
+  grid-column-start: 4;
+}
+.box-2 {
+  background-color: bisque;
+}
+.box-3 {
+  background-color: blueviolet;
+}
+.box-4 {
+  background-color: yellowgreen;
+}
+.box-5 {
+  background-color: yellow;
+}
+.box-6 {
+  background-color: violet;
+}
+.box-7 {
+  background-color: blue;
+}
+.box-8 {
+  background-color: cadetblue;
+}
+.box-9 {
+  background-color: tomato;
+}
+.box-10 {
+  background-color: teal;
+}
+.box-11 {
+  background-color: tan;
+}
+.box-12 {
+  background-color: steelblue;
+}
