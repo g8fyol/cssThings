@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #ba56f6;
+  --color-2: #ff6161;
+  --color-3: #505cca;
+  --color-4: #3dad99;
+  --color-5: #be3690;
+}
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-weight: 400;
+}
+.heading {
+  margin-top: 2em;
+  text-align: center;
+  color: black;
+  text-shadow: 7px 4px 7px #00000040;
+}
+.container {
+  display: grid;
+  grid-template-areas: "color1" "color2" "color3" "color4" "color5";
+  padding: 1em;
+  font-size: 3em;
+  gap: 0.5em;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: white;
+  border-radius: 5px;
+}
+.box-1 {
+  background-color: var(--color-1);
+  grid-area: color1;
+}
+.box-2 {
+  background-color: var(--color-2);
+  /* grid-area: color2; */
+}
+.box-3 {
+  background-color: var(--color-3);
+  grid-area: color3;
+}
+.box-4 {
+  background-color: var(--color-4);
+}
+.box-5 {
+  background-color: var(--color-5);
+  grid-area: color5;
+}
+
+/* how easy it has come to make it responsive just wow   */
+
+@media (min-width: 720px) {
+  .container {
+    grid-template-areas:
+      "color1 color1"
+      "color2 color3"
+      "color4 color3"
+      "color5 color5";
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-areas:
+      "color1 color1 color2 color3"
+      "color4 color5 color5 color3";
+  }
+  .box {
+    min-height: 300px;
+  }
+}

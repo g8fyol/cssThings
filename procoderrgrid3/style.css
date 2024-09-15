@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: lightblue;
+  min-height: 60vh;
+  display: grid;
+
+  /* this is gives explicit grid  */
+  /* grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px); */
+
+  /* this gives implicit grid and if used with template then it will be used as named area for various grid cell  */
+  grid-template-areas:
+    "banglore banglore delhi pune"
+    "banglore banglore delhi pune"
+    "Mumbai Mumbai Mumbai pune";
+
+  /* after giving area we can define size of each implicit row and column created due to area syntax it grid-template is not defined earlier */
+  /* grid-auto-rows: 120px;
+  grid-auto-columns: 150px; */
+}
+
+.box {
+  color: white;
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.box-1 {
+  background-color: green;
+  grid-column-start: banglore;
+  grid-column-end: banglore;
+  grid-row: banglore;
+  /* both start and end will be set to banglroe unlike numbers case in which if end is not given it is set to auto  */
+}
+
+.box-2 {
+  background-color: blueviolet;
+  grid-area: delhi;
+  /* grid-area is shorthand for start/end */
+  /* grid-area: delhi; //it will cover entire delhi */
+}
+
+.box-3 {
+  background-color: blue;
+}
+
+.box-4 {
+  background-color: brown;
+  grid-area: pune;
+}
+
+.box-5 {
+  background-color: coral;
+  grid-area: Mumbai;
+}
+
+.box-6 {
+  background-color: darkblue;
+}
+
+.box-7 {
+  background-color: darkred;
+}
+
+.box-8 {
+  background-color: darkslategray;
+}
+
+.box-9 {
+  background-color: gray;
+}
+
+.box-10 {
+  background-color: navy;
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-areas:
+      "banglore banglore delhi"
+      "banglore banglore delhi"
+      "Mumbai Mumbai Mumbai"
+      "pune pune pune";
+  }
+}
