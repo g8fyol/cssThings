@@ -1,0 +1,83 @@
+:root {
+  --primary-brand-color: #fa6400;
+  --secondary-brand-color: #405cf5;
+  --rounded: 24px;
+}
+
+html {
+  /* html tag have specificity of 1 so better we define in :root whose specificity is 10  */
+  /* 
+  --primary-brand-color: #fa6400;
+  --secondary-brand-color: #405cf5;
+  --rounded: 24px; */
+}
+
+body {
+  font-family: sans-serif;
+  /* --primary-brand-color: #fa6400;
+  --secondary-brand-color: #405cf5; */
+}
+/* #ea4c89 - > #fa6400 */
+/* #2ea44f - > #405cf5 */
+* {
+  box-sizing: border-box;
+}
+
+.first-container {
+  /* the element will always look up for the value of custom varibles in it's nearest parent whatever value there will be used in this way we can override the value of varible  */
+
+  --primary-brand-color: red;
+  --secondary-brand-color: green;
+  --rounded: 24px;
+}
+
+h2 {
+  /* if we define these vars here we can only access it in it's child only  */
+  /* --primary-brand-color: #fa6400;
+  --secondary-brand-color: #405cf5; */
+  color: var(--secondary-brand-color);
+}
+
+a {
+  color: var(--primary-brand-color, red);
+  /* here red is fallback color which will be used when there is a problme with variable  */
+  /* also if even fallback is not defined and varible is also broken then most of the time that property will be inherited from the parent like in case of color  */
+  text-decoration: none;
+  border: 2px solid var(--primary-brand-color);
+  padding: 0.5em 1em;
+  font-size: 14px;
+  display: inline-block;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: var(--rounded);
+}
+
+strong {
+  color: var(--primary-brand-color);
+}
+
+span {
+  color: var(--primary-brand-color);
+}
+
+code {
+  color: var(--secondary-brand-color);
+}
+
+button {
+  border: none;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: var(--rounded);
+  font-size: 14px;
+  font-family: inherit;
+  height: 32px;
+}
+
+.previous-button {
+  background-color: var(--primary-brand-color);
+}
+
+.next-button {
+  background-color: var(--secondary-brand-color);
+}
